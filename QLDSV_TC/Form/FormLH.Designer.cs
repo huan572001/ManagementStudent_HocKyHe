@@ -30,10 +30,10 @@ namespace QLDSV_TC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label mAKHOALabel;
-            System.Windows.Forms.Label kHOAHOCLabel;
+            System.Windows.Forms.Label mALOPLabel;
             System.Windows.Forms.Label tENLOPLabel;
-            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label kHOAHOCLabel;
+            System.Windows.Forms.Label mAKHOALabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLH));
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
@@ -45,6 +45,7 @@ namespace QLDSV_TC
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
             this.dS_SV1 = new QLDSV_TC.DS_SV1();
             this.bdsLOP = new System.Windows.Forms.BindingSource(this.components);
             this.LOPTableAdapter = new QLDSV_TC.DS_SV1TableAdapters.LOPTableAdapter();
@@ -57,12 +58,7 @@ namespace QLDSV_TC
             this.colKHOAHOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHOA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.txbMaKhoa = new System.Windows.Forms.TextBox();
-            this.TxbKhoaHoc = new System.Windows.Forms.TextBox();
-            this.txbTenLop = new System.Windows.Forms.TextBox();
-            this.txbMaLop = new System.Windows.Forms.TextBox();
-            this.bdsSV = new System.Windows.Forms.BindingSource(this.components);
-            this.barDockControl7 = new DevExpress.XtraBars.BarDockControl();
+            this.txbMaKhoa = new DevExpress.XtraEditors.TextEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -78,10 +74,15 @@ namespace QLDSV_TC
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            mAKHOALabel = new System.Windows.Forms.Label();
-            kHOAHOCLabel = new System.Windows.Forms.Label();
+            this.txbKhoaHoc = new DevExpress.XtraEditors.TextEdit();
+            this.txbTenLop = new DevExpress.XtraEditors.TextEdit();
+            this.txbMaLop = new DevExpress.XtraEditors.TextEdit();
+            this.bdsSV = new System.Windows.Forms.BindingSource(this.components);
+            this.fKSINHVIENLOPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            mALOPLabel = new System.Windows.Forms.Label();
             tENLOPLabel = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
+            kHOAHOCLabel = new System.Windows.Forms.Label();
+            mAKHOALabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).BeginInit();
@@ -90,105 +91,113 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaKhoa.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbKhoaHoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTenLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaLop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSINHVIENLOPBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // mAKHOALabel
+            // mALOPLabel
             // 
-            mAKHOALabel.AutoSize = true;
-            mAKHOALabel.Location = new System.Drawing.Point(351, 144);
-            mAKHOALabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            mAKHOALabel.Name = "mAKHOALabel";
-            mAKHOALabel.Size = new System.Drawing.Size(54, 13);
-            mAKHOALabel.TabIndex = 14;
-            mAKHOALabel.Text = "MAKHOA:";
-            // 
-            // kHOAHOCLabel
-            // 
-            kHOAHOCLabel.AutoSize = true;
-            kHOAHOCLabel.Location = new System.Drawing.Point(351, 108);
-            kHOAHOCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            kHOAHOCLabel.Name = "kHOAHOCLabel";
-            kHOAHOCLabel.Size = new System.Drawing.Size(61, 13);
-            kHOAHOCLabel.TabIndex = 12;
-            kHOAHOCLabel.Text = "KHOAHOC:";
+            mALOPLabel.AutoSize = true;
+            mALOPLabel.Location = new System.Drawing.Point(481, 27);
+            mALOPLabel.Name = "mALOPLabel";
+            mALOPLabel.Size = new System.Drawing.Size(56, 17);
+            mALOPLabel.TabIndex = 0;
+            mALOPLabel.Text = "MALOP:";
             // 
             // tENLOPLabel
             // 
             tENLOPLabel.AutoSize = true;
-            tENLOPLabel.Location = new System.Drawing.Point(351, 75);
-            tENLOPLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            tENLOPLabel.Location = new System.Drawing.Point(481, 69);
             tENLOPLabel.Name = "tENLOPLabel";
-            tENLOPLabel.Size = new System.Drawing.Size(49, 13);
-            tENLOPLabel.TabIndex = 10;
+            tENLOPLabel.Size = new System.Drawing.Size(63, 17);
+            tENLOPLabel.TabIndex = 2;
             tENLOPLabel.Text = "TENLOP:";
             // 
-            // label2
+            // kHOAHOCLabel
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(351, 45);
-            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(45, 13);
-            label2.TabIndex = 8;
-            label2.Text = "MALOP:";
+            kHOAHOCLabel.AutoSize = true;
+            kHOAHOCLabel.Location = new System.Drawing.Point(481, 107);
+            kHOAHOCLabel.Name = "kHOAHOCLabel";
+            kHOAHOCLabel.Size = new System.Drawing.Size(76, 17);
+            kHOAHOCLabel.TabIndex = 4;
+            kHOAHOCLabel.Text = "KHOAHOC:";
+            // 
+            // mAKHOALabel
+            // 
+            mAKHOALabel.AutoSize = true;
+            mAKHOALabel.Location = new System.Drawing.Point(481, 148);
+            mAKHOALabel.Name = "mAKHOALabel";
+            mAKHOALabel.Size = new System.Drawing.Size(66, 17);
+            mAKHOALabel.TabIndex = 6;
+            mAKHOALabel.Text = "MAKHOA:";
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 45);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 51);
             this.barDockControlTop.Manager = null;
-            this.barDockControlTop.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1492, 0);
             // 
             // barDockControl1
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl1.Location = new System.Drawing.Point(0, 45);
+            this.barDockControl1.Location = new System.Drawing.Point(0, 51);
             this.barDockControl1.Manager = null;
-            this.barDockControl1.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl1.Size = new System.Drawing.Size(1492, 0);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 45);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 51);
             this.barDockControl2.Manager = null;
-            this.barDockControl2.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl2.Size = new System.Drawing.Size(1492, 0);
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 45);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 51);
             this.barDockControl3.Manager = null;
-            this.barDockControl3.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl3.Size = new System.Drawing.Size(1492, 0);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl4.Location = new System.Drawing.Point(0, 45);
+            this.barDockControl4.Location = new System.Drawing.Point(0, 51);
             this.barDockControl4.Manager = null;
-            this.barDockControl4.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControl4.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl4.Size = new System.Drawing.Size(1492, 0);
             // 
             // barDockControl5
             // 
             this.barDockControl5.CausesValidation = false;
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl5.Location = new System.Drawing.Point(0, 45);
+            this.barDockControl5.Location = new System.Drawing.Point(0, 51);
             this.barDockControl5.Manager = null;
-            this.barDockControl5.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControl5.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl5.Size = new System.Drawing.Size(1492, 0);
             // 
             // barDockControl6
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 45);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 51);
             this.barDockControl6.Manager = null;
-            this.barDockControl6.Size = new System.Drawing.Size(1119, 0);
+            this.barDockControl6.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl6.Size = new System.Drawing.Size(1492, 0);
             // 
             // panelControl1
             // 
@@ -196,19 +205,19 @@ namespace QLDSV_TC
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.barDockControl7);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 45);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
+            this.panelControl1.Location = new System.Drawing.Point(0, 51);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1119, 79);
+            this.panelControl1.Size = new System.Drawing.Size(1492, 97);
             this.panelControl1.TabIndex = 18;
             // 
             // cmbKhoa
             // 
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(175, 20);
-            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
+            this.cmbKhoa.Location = new System.Drawing.Point(233, 25);
+            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(12);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(293, 21);
+            this.cmbKhoa.Size = new System.Drawing.Size(389, 24);
             this.cmbKhoa.TabIndex = 7;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
@@ -216,12 +225,21 @@ namespace QLDSV_TC
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(50, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.label1.Location = new System.Drawing.Point(67, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "KHOA : ";
+            // 
+            // barDockControl7
+            // 
+            this.barDockControl7.CausesValidation = false;
+            this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControl7.Location = new System.Drawing.Point(2, 2);
+            this.barDockControl7.Manager = null;
+            this.barDockControl7.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl7.Size = new System.Drawing.Size(1488, 0);
             // 
             // dS_SV1
             // 
@@ -257,10 +275,12 @@ namespace QLDSV_TC
             // 
             this.lOPGridControl.DataSource = this.bdsLOP;
             this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lOPGridControl.Location = new System.Drawing.Point(0, 124);
+            this.lOPGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
+            this.lOPGridControl.Location = new System.Drawing.Point(0, 148);
             this.lOPGridControl.MainView = this.gridView1;
+            this.lOPGridControl.Margin = new System.Windows.Forms.Padding(4);
             this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(1119, 220);
+            this.lOPGridControl.Size = new System.Drawing.Size(1492, 271);
             this.lOPGridControl.TabIndex = 19;
             this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -272,97 +292,71 @@ namespace QLDSV_TC
             this.colTENLOP,
             this.colKHOAHOC,
             this.colMAKHOA});
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.lOPGridControl;
             this.gridView1.Name = "gridView1";
             // 
             // colMALOP
             // 
             this.colMALOP.FieldName = "MALOP";
+            this.colMALOP.MinWidth = 27;
             this.colMALOP.Name = "colMALOP";
             this.colMALOP.Visible = true;
             this.colMALOP.VisibleIndex = 0;
+            this.colMALOP.Width = 100;
             // 
             // colTENLOP
             // 
             this.colTENLOP.FieldName = "TENLOP";
+            this.colTENLOP.MinWidth = 27;
             this.colTENLOP.Name = "colTENLOP";
             this.colTENLOP.Visible = true;
             this.colTENLOP.VisibleIndex = 1;
+            this.colTENLOP.Width = 100;
             // 
             // colKHOAHOC
             // 
             this.colKHOAHOC.FieldName = "KHOAHOC";
+            this.colKHOAHOC.MinWidth = 27;
             this.colKHOAHOC.Name = "colKHOAHOC";
             this.colKHOAHOC.Visible = true;
             this.colKHOAHOC.VisibleIndex = 2;
+            this.colKHOAHOC.Width = 100;
             // 
             // colMAKHOA
             // 
             this.colMAKHOA.FieldName = "MAKHOA";
+            this.colMAKHOA.MinWidth = 27;
             this.colMAKHOA.Name = "colMAKHOA";
             this.colMAKHOA.Visible = true;
             this.colMAKHOA.VisibleIndex = 3;
+            this.colMAKHOA.Width = 100;
             // 
             // panelControl2
             // 
             this.panelControl2.Controls.Add(mAKHOALabel);
             this.panelControl2.Controls.Add(this.txbMaKhoa);
             this.panelControl2.Controls.Add(kHOAHOCLabel);
-            this.panelControl2.Controls.Add(this.TxbKhoaHoc);
+            this.panelControl2.Controls.Add(this.txbKhoaHoc);
             this.panelControl2.Controls.Add(tENLOPLabel);
             this.panelControl2.Controls.Add(this.txbTenLop);
-            this.panelControl2.Controls.Add(label2);
+            this.panelControl2.Controls.Add(mALOPLabel);
             this.panelControl2.Controls.Add(this.txbMaLop);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 344);
+            this.panelControl2.Location = new System.Drawing.Point(0, 419);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1119, 224);
+            this.panelControl2.Size = new System.Drawing.Size(1492, 285);
             this.panelControl2.TabIndex = 20;
             // 
             // txbMaKhoa
             // 
-            this.txbMaKhoa.Location = new System.Drawing.Point(426, 144);
-            this.txbMaKhoa.Margin = new System.Windows.Forms.Padding(2);
+            this.txbMaKhoa.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOP, "MAKHOA", true));
+            this.txbMaKhoa.Location = new System.Drawing.Point(564, 143);
+            this.txbMaKhoa.MenuManager = this.barManager1;
             this.txbMaKhoa.Name = "txbMaKhoa";
-            this.txbMaKhoa.Size = new System.Drawing.Size(144, 21);
-            this.txbMaKhoa.TabIndex = 15;
-            // 
-            // TxbKhoaHoc
-            // 
-            this.TxbKhoaHoc.Location = new System.Drawing.Point(426, 106);
-            this.TxbKhoaHoc.Margin = new System.Windows.Forms.Padding(2);
-            this.TxbKhoaHoc.Name = "TxbKhoaHoc";
-            this.TxbKhoaHoc.Size = new System.Drawing.Size(144, 21);
-            this.TxbKhoaHoc.TabIndex = 13;
-            // 
-            // txbTenLop
-            // 
-            this.txbTenLop.Location = new System.Drawing.Point(426, 73);
-            this.txbTenLop.Margin = new System.Windows.Forms.Padding(2);
-            this.txbTenLop.Name = "txbTenLop";
-            this.txbTenLop.Size = new System.Drawing.Size(144, 21);
-            this.txbTenLop.TabIndex = 11;
-            // 
-            // txbMaLop
-            // 
-            this.txbMaLop.Location = new System.Drawing.Point(426, 41);
-            this.txbMaLop.Margin = new System.Windows.Forms.Padding(2);
-            this.txbMaLop.Name = "txbMaLop";
-            this.txbMaLop.Size = new System.Drawing.Size(144, 21);
-            this.txbMaLop.TabIndex = 9;
-            // 
-            // bdsSV
-            // 
-            this.bdsSV.DataMember = "SINHVIEN";
-            this.bdsSV.DataSource = this.dS_SV1;
-            // 
-            // barDockControl7
-            // 
-            this.barDockControl7.CausesValidation = false;
-            this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl7.Location = new System.Drawing.Point(2, 2);
-            this.barDockControl7.Manager = null;
-            this.barDockControl7.Size = new System.Drawing.Size(1115, 0);
+            this.txbMaKhoa.Size = new System.Drawing.Size(221, 22);
+            this.txbMaKhoa.TabIndex = 7;
             // 
             // barManager1
             // 
@@ -412,6 +406,7 @@ namespace QLDSV_TC
             this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
             this.btnAdd.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.LargeImage")));
             this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnAdd_ItemClick);
             // 
             // btnDelete
             // 
@@ -420,6 +415,7 @@ namespace QLDSV_TC
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDelete_ItemClick);
             // 
             // btnUpdate
             // 
@@ -428,6 +424,7 @@ namespace QLDSV_TC
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.LargeImage")));
             this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnUpdate_ItemClick);
             // 
             // btnPhucHoi
             // 
@@ -436,6 +433,7 @@ namespace QLDSV_TC
             this.btnPhucHoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.ImageOptions.Image")));
             this.btnPhucHoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.ImageOptions.LargeImage")));
             this.btnPhucHoi.Name = "btnPhucHoi";
+            this.btnPhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhucHoi_ItemClick);
             // 
             // btnGhi
             // 
@@ -444,6 +442,7 @@ namespace QLDSV_TC
             this.btnGhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.Image")));
             this.btnGhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.LargeImage")));
             this.btnGhi.Name = "btnGhi";
+            this.btnGhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGhi_ItemClick);
             // 
             // btnLamMoi
             // 
@@ -452,6 +451,7 @@ namespace QLDSV_TC
             this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
             this.btnLamMoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.LargeImage")));
             this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick);
             // 
             // btnThoat
             // 
@@ -460,6 +460,7 @@ namespace QLDSV_TC
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick_1);
             // 
             // bar2
             // 
@@ -491,37 +492,77 @@ namespace QLDSV_TC
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl8.Location = new System.Drawing.Point(0, 0);
             this.barDockControl8.Manager = this.barManager1;
-            this.barDockControl8.Size = new System.Drawing.Size(1119, 45);
+            this.barDockControl8.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControl8.Size = new System.Drawing.Size(1492, 51);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 568);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 704);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1119, 20);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1492, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 45);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 51);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 523);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 653);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1119, 45);
+            this.barDockControlRight.Location = new System.Drawing.Point(1492, 51);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 523);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 653);
+            // 
+            // txbKhoaHoc
+            // 
+            this.txbKhoaHoc.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOP, "KHOAHOC", true));
+            this.txbKhoaHoc.Location = new System.Drawing.Point(564, 102);
+            this.txbKhoaHoc.MenuManager = this.barManager1;
+            this.txbKhoaHoc.Name = "txbKhoaHoc";
+            this.txbKhoaHoc.Size = new System.Drawing.Size(221, 22);
+            this.txbKhoaHoc.TabIndex = 5;
+            // 
+            // txbTenLop
+            // 
+            this.txbTenLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOP, "TENLOP", true));
+            this.txbTenLop.Location = new System.Drawing.Point(564, 64);
+            this.txbTenLop.MenuManager = this.barManager1;
+            this.txbTenLop.Name = "txbTenLop";
+            this.txbTenLop.Size = new System.Drawing.Size(221, 22);
+            this.txbTenLop.TabIndex = 3;
+            // 
+            // txbMaLop
+            // 
+            this.txbMaLop.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOP, "MALOP", true));
+            this.txbMaLop.Location = new System.Drawing.Point(564, 24);
+            this.txbMaLop.MenuManager = this.barManager1;
+            this.txbMaLop.Name = "txbMaLop";
+            this.txbMaLop.Size = new System.Drawing.Size(221, 22);
+            this.txbMaLop.TabIndex = 1;
+            // 
+            // bdsSV
+            // 
+            this.bdsSV.DataSource = this.fKSINHVIENLOPBindingSource;
+            // 
+            // fKSINHVIENLOPBindingSource
+            // 
+            this.fKSINHVIENLOPBindingSource.DataMember = "FK_SINHVIEN_LOP";
+            this.fKSINHVIENLOPBindingSource.DataSource = this.bdsLOP;
             // 
             // FormLH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 588);
+            this.ClientSize = new System.Drawing.Size(1492, 724);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.lOPGridControl);
             this.Controls.Add(this.panelControl1);
@@ -536,6 +577,7 @@ namespace QLDSV_TC
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControl8);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLH";
             this.Text = "FormLH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -550,8 +592,13 @@ namespace QLDSV_TC
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaKhoa.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbKhoaHoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbTenLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMaLop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsSV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKSINHVIENLOPBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,10 +629,6 @@ namespace QLDSV_TC
         private DevExpress.XtraGrid.Columns.GridColumn colMAKHOA;
         private DS_SV1TableAdapters.SINHVIENTableAdapter SINHVIENTableAdapter;
         private System.Windows.Forms.BindingSource bdsSV;
-        private System.Windows.Forms.TextBox txbMaKhoa;
-        private System.Windows.Forms.TextBox TxbKhoaHoc;
-        private System.Windows.Forms.TextBox txbTenLop;
-        private System.Windows.Forms.TextBox txbMaLop;
         private DevExpress.XtraBars.BarDockControl barDockControl7;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
@@ -602,5 +645,10 @@ namespace QLDSV_TC
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraEditors.TextEdit txbMaKhoa;
+        private DevExpress.XtraEditors.TextEdit txbKhoaHoc;
+        private DevExpress.XtraEditors.TextEdit txbTenLop;
+        private DevExpress.XtraEditors.TextEdit txbMaLop;
+        private System.Windows.Forms.BindingSource fKSINHVIENLOPBindingSource;
     }
 }
