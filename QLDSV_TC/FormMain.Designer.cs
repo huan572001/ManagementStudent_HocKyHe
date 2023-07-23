@@ -399,6 +399,7 @@ namespace QLDSV_TC
             this.Ribbon = this.ribbonControl2;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
